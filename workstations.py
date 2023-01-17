@@ -20,14 +20,14 @@ db= firestore.client()
 def station1(value):
     db.collection('Controls').document('WS1').update({'External_Start':value})
 
-def reset_station1():
-    db.collection('Controls').document('WS1').update({'External_Reset':True}) 
+def reset_station1(value):
+    db.collection('Controls').document('WS1').update({'External_Reset':value}) 
 
-def station_clear_faults():
-    db.collection('Controls').document('WS1').update({'Clear_Faults_External':True})
+def station_clear_faults(value):
+    db.collection('Controls').document('WS1').update({'Clear_Faults_External':value})
 
 def station2(value):
     db.collection('Controls').document('WS2').update({'External_Start':value})
 
-def emergency():
-    db.collection('Controls').document('WS1').update({'External_Emergency':True})
+def emergency(value):
+    db.collection('Controls').document('WS1').update({'External_Emergency':value})

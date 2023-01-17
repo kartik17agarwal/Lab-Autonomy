@@ -75,6 +75,8 @@ def conversationFlow():
             if 'workstation 1' in usersaid:  # or 'work station 1' or 'workstation one'
                 speak('switching on workstation 1')
                 workstations.station1(True)
+                time.sleep(3)
+                workstations.station1(True)
                 break
 
             if 'workstation 2' in usersaid: #or 'work station 2' or 'workstation two' 
@@ -137,12 +139,16 @@ def conversationFlow():
         if 'reset' in usersaid:
             if 'workstation 1' in usersaid:  # or 'work station 1' or 'workstation one'
                 speak('Reseting Station 1')
-                workstations.reset_station1()
+                workstations.reset_station1(True)
+                time.sleep(3)
+                workstations.reset_station1(False)
                 break
 
         if 'clear faults' in usersaid:
             speak('Clearing Faults.....')
-            workstations.station_clear_faults()
+            workstations.station_clear_faults(True)
+            time.sleep(3)
+            workstations.station_clear_faults(False)
             break
 
         if 'place order' in usersaid:
@@ -152,7 +158,9 @@ def conversationFlow():
 
         if 'emergency' in usersaid:  # or 'stop ' 
             speak("Emergency stopping")
-            workstations.emergency()
+            workstations.emergency(True)
+            time.sleep(3)
+            workstations.emergency(False)
             break
 
         else:

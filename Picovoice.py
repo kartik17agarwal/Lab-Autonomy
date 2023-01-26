@@ -62,21 +62,83 @@ def conversationFlow():
         if 'hello' in usersaid:
             speak('hello i am Jarvis')
 
-        if 'good morning' in usersaid:
+        elif 'good morning' in usersaid:
             lab_autonomy.lights(True)
             speak('good morning')
 
-        if 'good night' in usersaid:
+        elif 'good night' in usersaid:
             lab_autonomy.lights(False)
             speak('good night')
+        
+        # elif 'start' in usersaid:
+        #     speak('Clearing Faults.....')
+        #     workstations.station_clear_faults(True)
+        #     time.sleep(2)
+        #     workstations.station_clear_faults(False)
+                
+        #     speak('Reseting Station 1')
+        #     workstations.reset_station1(True)
+        #     time.sleep(3)
+        #     workstations.reset_station1(False)
 
-        if 'switch on' in usersaid:
+        #     speak('starting workstation 1')
+        #     workstations.station1(True)
+        #     time.sleep(2)
+        #     workstations.station1(False)
+        #     break
+
+        elif 'start' in usersaid:
 
             if 'workstation 1' in usersaid:  # or 'work station 1' or 'workstation one'
-                speak('switching on workstation 1')
-                workstations.station1(True)
+                
+                speak('Clearing Faults.....')
+                workstations.station_clear_faults(True)
+                time.sleep(2)
+                workstations.station_clear_faults(False)
+                
+                speak('Reseting Station 1')
+                workstations.reset_station1(True)
                 time.sleep(3)
+                workstations.reset_station1(False)
+
+                speak('starting workstation 1')
                 workstations.station1(True)
+                time.sleep(2)
+                workstations.station1(False)
+                break
+
+            if 'work session 1' in usersaid:  # or 'work station 1' or 'workstation one'
+                speak('Clearing Faults.....')
+                workstations.station_clear_faults(True)
+                time.sleep(2)
+                workstations.station_clear_faults(False)
+                
+                speak('Reseting Station 1')
+                workstations.reset_station1(True)
+                time.sleep(3)
+                workstations.reset_station1(False)
+
+                speak('starting workstation 1')
+                workstations.station1(True)
+                time.sleep(2)
+                workstations.station1(False)
+                break
+
+            if 'station 1' in usersaid:  # or 'work station 1' or 'workstation one'
+                speak('Clearing Faults.....')
+                workstations.station_clear_faults(True)
+                time.sleep(2)
+                workstations.station_clear_faults(False)
+                
+                speak('Reseting Station 1')
+                workstations.reset_station1(True)
+                time.sleep(3)
+                workstations.reset_station1(False)
+
+                speak('starting workstation 1')
+                workstations.station1(True)
+                time.sleep(2)
+                workstations.station1(False)
                 break
 
             if 'workstation 2' in usersaid: #or 'work station 2' or 'workstation two' 
@@ -104,7 +166,90 @@ def conversationFlow():
                 speak('switching on all ac')
                 break
 
-        if 'switch off' in usersaid:
+        elif 'switch on' in usersaid:
+
+            if 'workstation 1' in usersaid:  # or 'work station 1' or 'workstation one'
+                speak('Clearing Faults.....')
+                workstations.station_clear_faults(True)
+                time.sleep(2)
+                workstations.station_clear_faults(False)
+                
+                speak('Reseting Station 1')
+                workstations.reset_station1(True)
+                time.sleep(3)
+                workstations.reset_station1(False)
+
+                speak('starting workstation 1')
+                workstations.station1(True)
+                time.sleep(2)
+                workstations.station1(False)
+                break
+
+            if 'work session 1' in usersaid:  # or 'work station 1' or 'workstation one'
+                speak('Clearing Faults.....')
+                workstations.station_clear_faults(True)
+                time.sleep(2)
+                workstations.station_clear_faults(False)
+                
+                speak('Reseting Station 1')
+                workstations.reset_station1(True)
+                time.sleep(3)
+                workstations.reset_station1(False)
+
+                speak('starting workstation 1')
+                workstations.station1(True)
+                time.sleep(2)
+                workstations.station1(False)
+                break
+
+            if 'station 1' in usersaid:  # or 'work station 1' or 'workstation one'
+                speak('Clearing Faults.....')
+                workstations.station_clear_faults(True)
+                time.sleep(2)
+                workstations.station_clear_faults(False)
+                
+                speak('Reseting Station 1')
+                workstations.reset_station1(True)
+                time.sleep(3)
+                workstations.reset_station1(False)
+
+                speak('starting workstation 1')
+                workstations.station1(True)
+                time.sleep(2)
+                workstations.station1(False)
+                break
+
+            if 'workstation 2' in usersaid: #or 'work station 2' or 'workstation two' 
+                speak('switching on workstation 2')
+                workstations.station2(True)
+                break
+
+            if 'workstation 3' in usersaid: #or 'work station 3' or 'workstation three' 
+                speak('switching on workstation 3')
+                workstations.station3(True)
+                break
+
+            if 'all lights' in usersaid:
+                lab_autonomy.lights(True)
+                speak('switching on all lights')
+                break
+
+            if 'lights' in usersaid:
+                lab_autonomy.lights(True)
+                speak('switching on all lights')
+                break
+
+            if 'all fans' in usersaid:
+                lab_autonomy.fans(True)
+                speak('switching on all fans')
+                break
+
+            if 'all ac' in usersaid:
+                lab_autonomy.acs(True)
+                speak('switching on all ac')
+                break
+
+        elif 'switch off' in usersaid:
             
             if 'workstation 1' in usersaid: #or 'work station 1' or 'workstation one'
                 speak('switching off workstation 1')
@@ -136,27 +281,40 @@ def conversationFlow():
                 speak('switching off all ac')
                 break
         
-        if 'reset' in usersaid:
+        elif 'reset' in usersaid:
             if 'workstation 1' in usersaid:  # or 'work station 1' or 'workstation one'
                 speak('Reseting Station 1')
                 workstations.reset_station1(True)
                 time.sleep(3)
                 workstations.reset_station1(False)
                 break
+            if 'work session 1' in usersaid:  # or 'work station 1' or 'workstation one'
+                speak('Reseting Station 1')
+                workstations.reset_station1(True)
+                time.sleep(3)
+                workstations.reset_station1(False)
+                break
 
-        if 'clear faults' in usersaid:
+        elif 'clear faults' in usersaid:
             speak('Clearing Faults.....')
             workstations.station_clear_faults(True)
             time.sleep(3)
             workstations.station_clear_faults(False)
             break
 
-        if 'place order' in usersaid:
+        elif 'clear falls' in usersaid:
+            speak('Clearing Faults.....')
+            workstations.station_clear_faults(True)
+            time.sleep(3)
+            workstations.station_clear_faults(False)
+            break
+
+        elif 'place order' in usersaid:
             speak('Placing order..')
             workstations.placeorder()
             break
 
-        if 'emergency' in usersaid:  # or 'stop ' 
+        elif 'emergency' in usersaid:  # or 'stop ' 
             speak("Emergency stopping")
             workstations.emergency(True)
             time.sleep(3)
